@@ -72,6 +72,7 @@ FOR /f "delims=" %%a IN (
 
 echo.
 echo * 글로벌 서버 업데이트로 한글 폰트 패치가 풀린 이후 make-backup.bat을 실행한 적 없다면, 그 파일을 먼저 실행해주세요.
+echo * 도중에 실수를 하셨다면 이 파일을 닫고 다시 실행하세요.
 pause
 
 rem 폴더가 없으면 생성
@@ -85,7 +86,7 @@ copy "%GLOBAL_PATH%\game\sqpack\ffxiv\000000.win32.index" "%~dp0\global\"
 copy "%GLOBAL_PATH%\game\sqpack\ffxiv\000000.win32.dat0" "%~dp0\global\"
 copy "%KOREA_PATH%\game\sqpack\ffxiv\000000.win32.index" "%~dp0\korean\"
 copy "%KOREA_PATH%\game\sqpack\ffxiv\000000.win32.dat0" "%~dp0\korean\"
-echo 글로벌 서버 백업본, 한국 서버 파일 복사 완료
+echo 글로벌 서버, 한국 서버 파일 복사 완료
 echo.
 echo 한글 폰트 패치 파일을 생성합니다...
 "%~dp0\FontTest"
@@ -94,6 +95,7 @@ echo 생성 완료!
 echo.
 echo 글로벌 서버 파일에 한글 폰트 패치를 적용합니다.
 echo 정말로 덮어씌우시겠습니까?
+echo * 실행 후 문제가 생긴다면 restore-backup.bat를 실행해서 백업한 내용을 복구하세요.
 pause
 copy "%~dp0\output\000000.win32.index" "%GLOBAL_PATH%\game\sqpack\ffxiv\"
 copy "%~dp0\output\000000.win32.dat1" "%GLOBAL_PATH%\game\sqpack\ffxiv\"

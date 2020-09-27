@@ -83,6 +83,7 @@ FOR /f "delims=" %%a IN (
 
 echo.
 echo * 글로벌 서버 업데이트로 한국어 패치가 풀린 이후 make-backup.bat을 실행한 적 없다면, 반드시 먼저 실행해주세요.
+echo * 도중에 실수를 하셨다면 이 파일을 닫고 다시 실행하세요.
 pause
 
 rem input 폴더가 없으면 생성
@@ -101,7 +102,7 @@ echo 로딩이 완료되면 "0"을 입력하십시오.
 
 copy "%GLOBAL_PATH%\game\sqpack\ffxiv\0a0000.win32.index" "%~dp0\input\"
 copy "%GLOBAL_PATH%\game\sqpack\ffxiv\0a0000.win32.dat0" "%~dp0\input\"
-echo 글로벌 서버 백업본으로부터 0a0000.win32.index, 0a0000.win32.dat0 파일 복사 완료
+echo 글로벌 서버 0a0000.win32.index, 0a0000.win32.dat0 파일 복사 완료
 echo.
 echo AllaganNode 실행 중...
 echo 로딩이 완료되면 "0"을 입력하십시오.
@@ -130,6 +131,7 @@ echo.
 echo.
 echo 글로벌 서버 파일에 한국어 패치를 적용합니다.
 echo 정말로 덮어씌우시겠습니까?
+echo * 실행 후 문제가 생긴다면 restore-backup.bat를 실행해서 백업한 내용을 복구하세요.
 pause
 copy "%~dp0\output\0a0000.win32.dat1" "%GLOBAL_PATH%\game\sqpack\ffxiv\"
 copy "%~dp0\output\0a0000.win32.index" "%GLOBAL_PATH%\game\sqpack\ffxiv\"
