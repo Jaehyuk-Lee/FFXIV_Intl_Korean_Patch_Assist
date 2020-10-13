@@ -77,8 +77,8 @@ rem 백업 생성일 체크
 FOR /f "delims=" %%a IN (
     'dir /b /a-d "%~dp0\backup\0a0000.win32.*" '
     ) DO (
-    CALL :creationdate "%~dp0\backup\%%a" c crdatetime
-    ECHO - 글로벌 서버 백업 파일이 존재합니다. [%%a] 백업 날짜: !crdatetime:~0,10!
+    CALL :creationdate "%~dp0\backup\%%a" w modifytime
+    ECHO - 글로벌 서버 백업 파일이 존재합니다. [%%a] 백업 날짜: !modifytime:~0,10!
 )
 
 echo.
