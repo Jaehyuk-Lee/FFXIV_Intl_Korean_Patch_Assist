@@ -21,7 +21,20 @@
 한국 서버, 글로벌 서버 프로그램에 있는 파일을 input (AllaganNode) / korean, global (fontTest) 폴더에 복사해서 output 폴더에 한패 결과물을 생성합니다.  
 글로벌 서버에 덮어쓰기 하기 전까지는 글로벌 서버는 원본 그대로 남아있습니다. 따라서, 문제가 생기면 이 파일을 처음부터 다시 실행하면 됩니다.
 
+## 한자 출력
+
+한국 서버 폰트 데이터를 글로벌 서버에 적용시키면 한국 서버 클라이언트와 동일하게 한자가 출력되지 않습니다.  
+이 문제를 해결하기 위해서는 [이 링크](https://1drv.ms/u/s!ArFh2dBXj3ULiOMw798aAu9N_OIq3A?e=jmVBAU)에서 파일을 받은 다음, 압축을 푸셔서 게임 설치경로 (기본값 C:/Program Files (x86)/SquareEnix/FINAL FANTASY XIV - A Realm Reborn/game) 에 넣으시면 됩니다. (만약 다음 릴리즈가 출시된다면, 해당 릴리즈에 포함시켜서 배포할 예정입니다.)
+
+* 주의: DX11 버전만 지원합니다. DX9는 지원계획이 없습니다.
+
+위 프로그램 역시 다른 분의 프로그램의 도움을 받았습니다.  
+프로그램의 기본 베이스는 [이 게시글](http://www.inven.co.kr/board/ff14/4338/4398)에서 받았으며, 한글 출력 데이터를 한자 데이터로 데이터만 바꾼 것입니다.
+
+기존에 한글 채팅 패치를 하신 분들은 해당 패치와 동시에 적용할 수 없으므로 삭제 혹은 다른 곳으로 백업을 해놓으셔야 합니다. 한글 패치를 모두 적용시킨 경우에는 해당 한글 채팅 패치를 사용하지 않으셔도 한글 채팅에 문제가 없습니다.
+
 ## 참고
 `AllaganNode`는 한국어 데이터 적용, `FontTest`는 한글 폰트 출력에 사용합니다.
 
-Allagan-Node는 GitHub에 저장소가 있습니다. [링크](https://github.com/allagan-node/allagan-node)
+Allagan-Node는 GitHub에 저장소가 있습니다. [링크](https://github.com/allagan-node/allagan-node)  
+FontTest는 위의 Allgan-Node GitHub 저장소 내부에 포함되어 있습니다.
